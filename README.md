@@ -11,7 +11,7 @@ Compliation
 -----------
 In order to compile with the bibliography you must run pdflatex once then bibtex then pdflatex twice as follows:
     pdflatex report.tex
-    bibtex
+    bibtex report
     pdflatex report.tex
     pdflatex report.tex
 
