@@ -17,3 +17,12 @@ In order to compile with the bibliography you must run pdflatex once then bibtex
 
 
  [bibdesk]: http://bibdesk.sourceforge.net/  "Bibdesk Site"
+
+Structure
+---------
+Please structure the code in the following way:
+* All sections to be made in directory made after their section name.
+  E.g. Software Management section must be in software_management directory
+* All subsections must be in seperate `tex` files in their section directory
+  E.g. Team Management, Choosing Between Technologies etc all come under software_management
+  and are included into the section
