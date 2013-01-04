@@ -1,6 +1,6 @@
 \subsection{Challenges}
   \subsubsection{Filtered emails}
-    Although not technical, one big challenge we faced was how to reduce the number of irrelevant emails a student was receiving. Two solutions that were not optimal were discussed:
+    One big design challenge we faced was how to reduce the number of irrelevant emails a student was receiving. Two solutions that were not optimal were discussed:
     \begin{itemize}
       \item \textbf{Opt in emails:} students could opt in for receiving certain email catagories based on tags. We soon realised that this would require a lot of maintence by students to continiously update their whitelist with tags as they were being created.
       Not only would it be a lot of work for a student, but students might miss out on exciting emails which do not fall into specific catagories, or a catagory a student had remembered to whitelist. For example the Raspberry Pie is unlikely to fall into a tag group but it's own. If a student forgets to add this to their list they'll miss out entirely on the emails when the likilihood is that they may have been interested.
@@ -16,3 +16,27 @@
     \end{itemize}
 
     Furthermore in the student account settings we allow them to choose between receiving this smart email system, all emails, or only personal and event emails.
+
+  \subsubsection{Intuative Features}
+    Several design small challenges that fall under one large umbrella are how to ensure that a student knows the features we implemented are available to them. Since we developed the site it is obvious to us how to use it but to ensure that users know too we have made use of the following:
+
+    \paragraph{Tooltips:} These appear whenever you run your cursor over an area of text that is actually editable. By this we mean you can click on it and edit it in place. Examples are the students name, year, degree, and bio. They all start with `click here to' and we believe they are well placed and helpful rather than irritating.
+    Tooltips also appear for company and admin. %TODO CHECK THIS
+    Once a user is comfortable with using the site, they have the option to turn tooltips off in their settings.
+
+    \paragraph{Yellow Highlighting:} This also ties in nicely with the tooltips and highlights the boundary for what can and cannot be edited.
+
+    \paragraph{Incomplete Sections:} In order to highlight to any user a section, document or field that is incomplete we have opted to highlight these in red rather than providing a message. We feel that by keeping this theme consistent throughout all users profiles it is quite intuative in itself.
+    Whats more is that when a student initially signs up they are informed that their profile is inactive and they need to fill in certain fields before they can activate it. As they fill in these fields (which are initially red) the colour dissapears and we hope that students will intuatively learn from the beginning that the red colouring means an item is missing.
+
+    \paragraph{Navigation:} This has largely been made possible through the use of a navigation bar at the top of our website. We feel that this is intuative to all of our users who will be familiar with navigation bars from other sites such as Facebook\cite{facebook}, LinkedIn\cite{linkedin} and even Google\cite{google}. These websites really encourage user interaction by clicking on items located anywhere on the page and adopt the technique of changing the cursor to a pointer (hand) rather than the default which is normally displayed when you can interact with an object. As such we've adopted this technique through our site when items on the page can be clicked on to redirect. For example students can click on the top three events \& placements that are displayed on their dashboard. In order to make it very obvious we subtly change the colour scheme of the background to display that they've highlighted it.
+    % TODO INSERT PICTURE HERE
+
+    We have also made use of icons in order to make navigation more intuative, again users of every day websites have become accustimed to certain items meaning certain things, for example a cog is often associated with settings and so we had no qualms about using them freely in the design of our site.
+    The downwards facing caret is used to alert users that clicking on their name on the navigation bar provides them with extra options.
+    
+    \begin{center}
+    \includegraphics[scale=0.5]{images/design/navigation_caret}
+    \end{center}
+
+    Similarly the star and ban icons on a company as featured earlier, combined with the tooltips make it clear to a user what they mean.
