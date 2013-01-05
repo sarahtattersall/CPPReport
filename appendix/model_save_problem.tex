@@ -15,9 +15,10 @@ However on inspecting the documented code , what actually happens is the attribu
 It is on this \verb!clear! call that our error callback was being called, since we have validation in all of our models
 to document which fields are required. By clearing a field it will not pass validation and so this is where the mysterious message that the attribtues must be set was coming from.
 
-\begin{center}
+\begin{figure}[H]\centering
 \includegraphics[scale=0.5]{images/appendix/backbone_changelog}
-\end{center}
+\caption{Changelog for save method. Clearly shows clear has been added.}
+\end{figure}
 
 In order to fix this issue we decided to set \verb!forceUpdate: true! as an option, instead of removing \verb!wait: true!, since we'd prefer to use server values if indeed they haven't changed. We decided forcing our Backbone model to update despite validation is alright in this situation because we know that the server has a higher level of validation and so our model will always infact be valid.
 
