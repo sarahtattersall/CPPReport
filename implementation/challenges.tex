@@ -14,9 +14,11 @@ As well as design challenges we faced many technical challenges along the way wi
 
     We feel that this solution helped to tackle the large amount of work that needed to be done in a relatively short time frame.
   \subsubsection{Updating our Gems}
-    Leading on from the previous point that we had a lot of new technologies to learn, this meant that we did not always understand the complete inside and outs of them when using them, just enough knowledge to procede with our project. This meant that in December when we decided to update all of our gems and some features unexpectidly broke we were left quite confused. As our test suite was not complete (documented later), they managed to go unnoticed for quite a while.
-    One such feature that was observed was saving Backbone models from client to server the server returned OK, however the error call back was called instead of success. This was first noticed when adding new tags to a students skill set, the tag would only be added on refresh (since it saved on the server).
+    Leading on from the previous point that we had a lot of new technologies to learn, this meant that we did not always understand the complete ins and outs of the individual librarys when using them, just enough knowledge to procede with our project. This meant that in December when we decided to update all of our gems whereby some features unexpectidly broke we were left quite confused. As our test suite was not complete (documented later), these breakages managed to go unnoticed for quite a while.
+
+    One such problem that was finally tracked down was saving Backbone models from the client to the server. On saving our server controller returned a 204 (No Content) success status code, clearly showing that the model had been saved on the server. However the error callback was always called instead of the success callback. This was first noticed when adding new tags to a students skill set, the tag would only be added on refresh (since it saved on the server), but it turned out this was happening in most other places where we saved models too.
     We were absolutely sure that it must have been something we'd done to the code, that slipped past testing sicne consulting the Backbone.js documentation was no obvious help. Eventually we tracked the issue down to the Gem update commit that convinced us it must have actually been to do with updating them Gems.
-    This issue took a very long time to fix and involved many searches, a Stack Overflow question, and was only fixed by consulting the source code, the real problem is documented in the appendix.
-    We believe these issues came fro,m
+    This issue took a very long time to track down fix (the explanation is documented in section A of the appendix) and there were many others like this.
+
+    Unfortunately poor documentation, a lack of knowledge and a less than complete test suite made Gem updating a rather difficult issue.
   \subsubsection{Think of something else}
