@@ -9,12 +9,14 @@
 	\subsubsection{Server-Side Overview}
 		CPP 2.0: Connected uses
 		\paragraph{Ruby on Rails (a.k.a Rails)\cite{ror}} as a web framework for storing persistent data and communicating it to the front-end of the system. Ruby on Rails uses a Model View Controller design pattern to organise the back-end structure, providing secure and efficient storage of persistent user information. The following schema entity relationship diagram details the setup of the different entities within the back-end Ruby on Rails server.
-		<ERD>
+		%\begin{center}
+		    %\includegraphics[scale=0.3]{images/implementation/technical_overview/erd}
+		%\end{center}
 		%TODO: I'm just trying to write about how it's got a really nice DB
 		Ruby on Rails helps us to meet our technological requirements by using a Model-View-Controller architecture pattern where by each model maps to a table in a database, a controller responds to external requests from the web server, and we have chosen to implement JavaScript views rather than Rails views.
 		Very usefully Rails allows us to avoid using raw SQL to find database records and provides a vast amount of methods for extracting data from a table. We feel this approach is much more clear and intuative to a programmer and has overall been less error prone than if we would have had to write our own queries. %TODO: Perhaps appendicise some of the really useful ones 
 
-		Ruby on Rails provides an elegant and succinct way to communicate with the front-end implemented in Backbone and supports all the features that our project requires. 
+		Ruby on Rails provides an elegant and succinct way to communicate with the front-end implemented in Backbone and supports all features that our project requires. 
 
 		\paragraph{Ruby Gems\cite{gems}} are packaged Ruby applications or libraries and are another advantage of writing our project with Rails. There is a huge gem community and often someone has written a gem to provide the exact functionality we desire for something. This saves us time in implementing a large amount of code to acheive the feature we want and allows us to spend more time tiying this feature into our site. [TODO: Im not that keen on the phrasing of this, but it's what I want to say]. In our project we have made use of many gems such as
 		\begin{itemize}
