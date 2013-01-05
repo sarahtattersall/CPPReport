@@ -8,17 +8,46 @@
 
     We felt that github issues were better than a white board of post it issues in a static location because not only does github allow you could access them at anytime, anywhere, you can assign different brightly coloured labels to the issues, assign them to a person to complete, comment on the issues and actually see the commits that fixed/broke these issues. 
 
-    \begin{center}
-    \includegraphics[scale=0.3]{images/project_management/team_management/github_issues}
-
-    \includegraphics[scale=0.3]{images/project_management/team_management/graduate_issue}
-    \end{center}
-
 
   \subsubsection{Team Collaboration}
-    Through the use of frequent stand up meetings combined with daily group programming sessions and online communication, we established a very effective group development environment. We often developed alongside at least one other member of the group, using a specific area in the labs to work on the project which became a hub for development. We employed a collaborative approach to development, continuously communicating with each other for advice or alternative implementations, this enhanced development as each member had specific roles however as a group we maintained an overall understanding of the system and progress and so could collaboratively help each other.
 
-    Our collaborative group environment was supported by the use of multiple collaboration tools, we used a GitHub repository and GIT\cite{git} as a version control system which allowed group members to work on development of their specific areas of functionality and merge the changed made by different members to the same files. Changes can also be reverted to previous versions at any time. GIT also enabled us to create separate braches for large sections of development that can be later integrated or dropped, for example we created a branch when we started to use Backbone in the early stages of the project. Overall GIT enabled us to develop simultaneously as a group to develop individually but merge changes frequently, iteratively adding assigned functionality. We extensively utelised GitHub issues to assign one or more members to tasks. Tags and comments can be associated with GitHub issues which can also be closed via GIT commits. GitHub issues are notified via email to all following members of the issue to update the status of the issue. These features all provided valuable in efficient code collaboration (... pull req ...). We also setup a Facebook group including all members to instantly message the entire group, this sustained the collaborative group environment and enabled the group to remain in instant contact when working remotely. 
+    Through the use of frequent stand up meetings combined with daily group programming sessions and online communication, we established a very effective group development environment. We have detailed the main points below:
 
-    We used a continuous integration tracker called CircleCI to continuously report on the state of the project, alerting us if the build broke. As we developed we always aimed to maintain the build and found that this encouraged the flow of development as additions where integrated faster into an efficient and stable system advancement.
+    %I'm avoiding the use of the title 'pair programming' here since that's not what we did or this sentance implies
+    \paragraph{Coding Sessions} We often developed alongside at least one other member of the group, using a specific area in the labs to work on the project which became a hub for development. We employed a collaborative approach to development by continuously communicating with each other for advice or alternative implementations. This significantly enhanced development since each member had specific roles and knowledge areas and thus could help other people out when their work areas overlapped. As a group we did, however, maintain an overall understanding of the system and it's progress and so could collaboratively help each other.
+
+    \paragraph{Stand ups} Every day we would try to have a team stand up. Stand ups are really good for keeping on track of a project since they:
+    \begin{itemize}
+        \item Require mandatory participation: everyone attends and so there is always aware of how the project is moving on.
+        \item Have a set structure: I.e. `What did I accomplish yesterday?', `What will I do today?', `What obstacles are impeding my progress?'.
+        \item Are snappy and efficient: Due to their short nature waffle is kept to a minimum and points are put across clearly.
+    \end{itemize}
+    These turned out to be one of our best collaboration methods, and after stand ups any group decisions that needed to be made could be. There was never any repetition or people missing out on something because they hadn't been told.
+    Whilst away for the Christmas holidays we tried to maintain these stand ups through Skype\cite{skype} calls in order for us to continiously update the group on what we'd been working on. However since it was the holidays these were a little more infrequent.
+    For our group stand ups worked amazingly well.
+
+    \paragraph{Git\cite{git}} Version control is vital in modern software developement as it allows parallel development by multiple tema members without the risk of overwriting each others work. It also allows for small isolated improvements to be integrating into the code base regularly, and if needed changes cab be reverted to previouis versions at any time. Git also allows us to create separate braches for large sections of development that can be later integrated or dropped, for example we created a branch when we started to use Backbone in the early stages of the project.
+    Since the entire repository and history is stored on each individual computer it enables us to work on our project whilst on the go since we can still commit withouth being connected to the internet, a feature which SVN lacks.
+    Taking all of the above into consideration it was clearly the natural choice for us to use for our project. Especially since we are all familiar with it.
+    Overall GIT enabled us to develop simultaneously as a group to develop individually but merge changes frequently, iteratively adding assigned functionality. We extensively utelised GitHub issues to assign one or more members to tasks.
+
+    \paragraph{Github} This was (and still is) the perfect place to host our codebase since it provides many additional features which we utilised:
+    \begin{itemize}
+        \item \textbf{Readme:} Github provides you with a README which is displayed on the front page of your repository. Here we document the requirements needed to be able to work on and run our project, some useful tools we have made use of during development and how to get our project up and running.
+        \item \textbf{Issues:} Github allows you to create an issue list to keep track of problems and tasks to be implemented. To each individual issue you can assign coloured labels to it visual effect detailing what it is about (e.g. front end, bug, quick fix etc.). Team members may also comment on these issues and you can reference other issues within it. Every issue can be tracked in git commits by including the comment number (e.g. \#50) and so you can easily see what code has been changed to deal with an issue. You can also close an issue via your commit by adding `fixes' infront of the issue number. Each issue is notified via email to all following members of the issue so it was very easy for us to track what was going on. 
+
+        \begin{center}
+        \includegraphics[scale=0.3]{images/project_management/team_management/graduate_issue}
+
+        \includegraphics[scale=0.3]{images/project_management/team_management/github_issues}
+        \end{center}
+        \item \textbf{Pull Requests:}
+        \item \textbf{Automatic backup:} Since our project is backed up with Github, we never had to worry about data loss.
+    \end{itemize}
+    These features have been invaluable for efficient code collaboration.
+
+    \paragraph{Facebook} We have also set up a Facebook group including all members to instantly message the entire group, this sustained the collaborative group environment and enabled the group to remain in instant contact when working remotely.
+    They also stopped Github issues from becoming too chatty.
+
+    \paragraph{CircleCI} We used a continuous integration tracker to continuously report on the state of the project, alerting us if the build broke. As we developed we always aimed to maintain the build and found that this encouraged the flow of development as additions where integrated faster into an efficient and stable system advancement.
     We felt that writing weekly reports for the Software Engineering course enabled us to reflect on the group interaction and continuously reminded us to track our progress and apply an Agile development approach.   
