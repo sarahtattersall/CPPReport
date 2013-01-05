@@ -17,7 +17,7 @@ to document which fields are required. By clearing a field it will not pass vali
 
 \begin{figure}[H]\centering
 \includegraphics[scale=0.5]{images/appendix/backbone_changelog}
-\caption{Changelog for save method. Clearly shows clear has been added.}
+\caption{Changelog for save method, showing clear method call has been added.}
 \end{figure}
 
 In order to fix this issue we decided to set \verb!forceUpdate: true! as an option, instead of removing \verb!wait: true!, since we'd prefer to use server values if indeed they haven't changed. We decided forcing our Backbone model to update despite validation is alright in this situation because we know that the server has a higher level of validation and so our model will always infact be valid.
