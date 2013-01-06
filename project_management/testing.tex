@@ -35,7 +35,21 @@
     \paragraph{Jasminerice:}
       For client side testing we chose to use Jasminerice since it is very similar to RSpec and thus does not require a vast amount of learning to get up to speed. Nicely guard also supports runing client side tests and thus the two could be merged together very easily without disrupting the development pattern.
 
-  % TODO PERHAPS IN EVALUATION
+  \subsubsection{Mocking}
+    We made extensive use of mocking techniques when writing our test suite with the use of sinon.js\cite{sinon} and RSpec-mocks\cite{rspec_mocks}.
+
+    We feel that mocking really helped us to to ensure that tests only failed when relevant code related to the class being tested was broken. Mock objects are used to test behaviour `much the same way that a car designer uses a crash test dummy to simulate the dynamic behavior of a human in vehicle impacts'\cite{mock_quote} and were of great importantance to us when testing a piece of code that depends on another.
+    Since a specific test should only be testing a focus object, if an external object's behaviour was changed it and it broke a test it would have left us very confused to what functionality was actually broken. Mocking helped us avoid this problem, and some particular techniques for mocking we used were:
+    
+    \paragraph{Spies} enabled us to watch objects method calls. We could set an object up with a spy, run some code and then ensure that the spy was called, with the arguments we expected and called the exepcted number of times.
+
+    \paragraph{Stubs} allowed us to decouple classes from one another during testing. We could stub out a classes new method in order to return our stubbed objects.
+    These stubbed objects methods could be altered to return exactly what we wanted and they easily allowed us to test features of our code which would otherwise require a tricky set up.
+    For example, when testing what happens when we fetch data from the server on the client side we could stub our model with the call to \verb!model.fetch([options])! yielding to either the success callback or the error callback.
+    This nicely decoupled the server from our tests and easily allowed us to test error cases.
+
+
+
   \subsubsection{TDD}
     Due to time constraints and the majority of this project requring everybody learning new skills we adopted a slightly modified TDD approach. We decided it was best for people to become specialised in different areas and so Sarah read in depth about our chosen frameworks and then after each stand up she speced out new unit tests for the next iteration which everyone else then wrote code to fix.
 
