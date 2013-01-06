@@ -1,16 +1,16 @@
 \subsection{Testing}
   \subsubsection{Server Side}
     \paragraph{RSpec:}
-      RSpec `is designed to make Test-Driven Development a productive and enjoyable experience,'\cite{rspec-overview} and so is perfect for our needs. It also has very nice integration with rake and allows us to run the entire test suite very easily by running \verb!rake spec!, and thus requires no complicated instructions to run.
+      RSpec `is designed to make Test-Driven Development a productive and enjoyable experience'\cite{rspec-overview} and so is perfect for our needs. It also has very nice integration with rake and allows us to run the entire test suite very easily by running \verb!rake spec!, and thus requires no complicated instructions to run.
 
-      Rspec also uses the workds `describe' and `it' in order to epress concepts like a conversation that really aid in readability, as can be seen below.
+      Rspec also uses the words `describe' and `it' in order to express concepts like a conversation that really aid in readability, as can be seen below.
 
       \begin{figure}[H]\centering
       \includegraphics[scale=0.5]{images/project_management/testing/rspec_events_controller}
       \caption{Some of the Events Controller tests where readability is very clear due to RSpec}
       \end{figure}
 
-      When a test fails the describe, context and it blocks are concatentated together into a very readable sentance which can be quickly understood by the user. 
+      When a test fails the `describe', `context' and `it' blocks are concatentated together into a very readable sentance which can be quickly understood by the user. 
       
       \begin{figure}[H]\centering
       \includegraphics[scale=0.5]{images/project_management/testing/rspec_events_contoller_broken}
@@ -18,7 +18,7 @@
       \end{figure}
 
     \paragraph{factory\_girl:}
-      `factory\_girl is a fixtures replacement with a straightforward definition syntax, support for multiple build strategies (saved instances, unsaved instances, attribute hashes, and stubbed objects), and support for multiple factories for the same class (user, admin\_user, and so on), including factory inheritance.'\cite{factory-girl}, it was particularly useful to us for creating valid models during testing that could then be modified in particular way to test a certain attribute/feature of a model.
+      `factory\_girl is a fixtures replacement with a straightforward definition syntax, support for multiple build strategies (saved instances, unsaved instances, attribute hashes, and stubbed objects), and support for multiple factories for the same class (user, admin\_user, and so on), including factory inheritance.'\cite{factory-girl} It was particularly useful to us for creating valid models during testing that could then be modified in particular way to test a certain attribute/feature of a model.
       It also saved us from setting up the model multiple times during testing.
       It also became particularly relevant for seeing out database with test data to be displayed on the site, which made interacting with it during production far more realistic. Quite often seeding our database with a large amount of data allowed us to spot and address bugs that we may not have noticed otherwise.
 

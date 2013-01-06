@@ -23,31 +23,35 @@
 
     Taking all of the above into consideration GIT was clearly the natural choice for us to use for our project, especially since we are all familiar with using GIT.
     Overall GIT enabled us to develop simultaneously as a group to develop individually but merge changes frequently, iteratively adding assigned functionality.
-    \paragraph{Github} This is the perfect place to host our codebase since it provides many additional features which we utilised:
+    \paragraph{GitHub\cite{github}} This is the perfect place to host our codebase since it provides many additional features which we utilised:
     \begin{itemize}
         \item \textbf{Readme:} Github provides you with a README which is displayed on the front page of your repository. Here we document the requirements needed to be able to work on and run our project, some useful tools we have made use of during development and how to get our project up and running.
-        \item \textbf{Issues:} We extensively utelised GitHub issues to assign one or more members to tasks. Github allows you to create an issue list to keep track of problems and tasks to be implemented. To each individual issue you can assign coloured labels to it visual effect detailing what it is about (e.g. front end, bug, quick fix etc.). Team members may also comment on these issues and you can reference other issues within it. Every issue can be tracked in git commits by including the comment number (e.g. \#50) and so you can easily see what code has been changed to deal with an issue. You can also close an issue via your commit by adding `fixes' infront of the issue number. Each issue is notified via email to all following members of the issue so it was very easy for us to track what was going on. 
+        \item \textbf{Issues:} We extensively utelised GitHub issues to assign one or more members to tasks. GitHub allows you to create an issue list to keep track of problems and tasks to be implemented. To each individual issue you can assign coloured labels to it visual effect detailing what it is about (e.g. front end, bug, quick fix etc.). Team members may also comment on these issues and you can reference other issues within it. Every issue can be tracked in git commits by including the comment number (e.g. \#50) and so you can easily see what code has been changed to deal with an issue. You can also close an issue via your commit by adding `fixes' infront of the issue number. Each issue is notified via email to all following members of the issue so it was very easy for us to track what was going on. 
 
         \begin{figure}[H]\centering
         \includegraphics[scale=0.3]{images/project_management/team_management/graduate_issue}
-        \caption{Example of a github issue that has been commented on, fixed, and closed}
+        \caption{Example of a GitHub issue that has been commented on, fixed, and closed}
 
         \includegraphics[scale=0.3]{images/project_management/team_management/github_issues}
         \caption{A view of how we see our issue list}
         \end{figure}
-        \item \textbf{Pull Requests:}
-        \item \textbf{Automatic backup:} Since our project is backed up with Github, we never had to worry about data loss.
+        \item \textbf{Pull Requests:} Allow us to show each other changes we've pushed to our repository before merging them into our master branch. We each had a development branch which we would push our requests to and they would then be code reviewd by other members of the team before someone giving the go ahead to `ship it'. Pull requests helped us significantly to spot many bugs before code was pushed into production and to understand our team members code giving us a more thorough understanding of the entire code base.
+        %TODO PICTURE
+        \item \textbf{Automatic backup:} Since our project is backed up with GitHub, we never had to worry about data loss.
     \end{itemize}
     These features have been invaluable for efficient code collaboration.
 
-    \paragraph{Facebook\cite{facebook}} We have also set up a Facebook group including all members to instantly message the entire group, this sustained the collaborative group environment and enabled the group to remain in instant contact when working remotely.
-    They also stopped Github issues from becoming too chatty.
+    \paragraph{Facebook\cite{facebook}} We have also set up a Facebook group including all members to instantly message the entire group, this sustained the collaborative group environment and enabled the us to remain in instant contact when working remotely.
+    It also stopped Github issues from becoming too chatty.
 
     \paragraph{CircleCI\cite{circleci}} We used a continuous integration tracker to continuously report on the state of the project, alerting us if the build broke. As we developed we always aimed to maintain the build and found that this encouraged the flow of development as additions where integrated faster into an efficient and stable system advancement.
     We felt that writing weekly reports for the Software Engineering course enabled us to reflect on the group interaction and continuously reminded us to track our progress and apply an Agile development approach.
 
     \paragraph{Sublime\cite{sublime}} Although, not strictly used for team collaboration we all agreed to use the sublime text editor whilst working on our project. Although sublime has many nice features for development the primary reason we decided to enforce its use is due to the additional package manager\cite{sublime_pm} which enabled the interactive use of git within our text editor.
     The main used feature of this was git commits. When we entered commit mode, we could type out our commit like normal, however under this it shows you the diff of everything you'd changed in the commit. This was handy and aided us in writing descriptive, detailed commits.
+
+    % TODO NEED SOME BETTER RAKE KNOWLEDGE HERE
+    \paragraph{rake\cite{rake}} Rake is a Ruby build program and has capabilities similar to make. It allowed us to automate tasks that took many instructions that we performed frequently. One exmaple is when changing an item in the data base we would often have to run \verb!rake db:drop; rake db:migrate; rake db:seed; rake db:test:prepare! and to save us from such hassle we created a command \verb!nuke! that did these all for us.
 
   \subsubsection{Software Design Methodology}
     Throughout our project we followed an Agile software design approach in order to increase group productivity and accelerate code development. We felt that this enabled rapid response to alterations in project requirements and also provided a key factor in ensuring the project progressed according to plan.
@@ -56,7 +60,7 @@
 
     At a more detailed level within each milestone, we set iterations during frequent group stand up meetings in order to clarify individual member roles and tasks. In order to delegate tasks between the members of the group we divided up the group into Front-end, Back-end and Testing specialist units. Tasks outlined in each iteration would be divided accordingly to the corresponding units and then further assigned to individual group members. We used Trello in the initial stages of the project in order to allocate and divide tasks within iterations to group members, this provided an invaluable project management tool to establish group collaboration and roles. Towards the later stage of the project as group collaboration developed further, and the volume of new tasks decreased, we utilised GitHub issues to outline development issues that needed to be resolved, assigning issues to the specialised group member as they arose from testing and requirement changes.
 
-    We felt that github issues were better than a white board of post it issues in a static location because not only does github allow you could access them at anytime, anywhere, you can assign different brightly coloured labels to the issues, assign them to a person to complete, comment on the issues and actually see the commits that fixed/broke these issues.
+    We felt that github issues were better than a white board of post-it's in a static location because not only does GitHub allow you to access them at anytime, anywhere, you can assign different brightly coloured labels to the issues, assign them to a person to complete, comment on the issues and actually see the commits that fixed or broke these issues.
 
   \subsubsection {Team Member Contributions}
     \paragraph{Pete Hamilton}
