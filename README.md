@@ -1,22 +1,18 @@
 CPPReport
 =========
 
-Software
----------
-If you are a Mac user please install [Bibdesk] [bibdesk], it will make your referecning lives so much easier.
-Load `references.bib` into it and add new references. 
-When done save and exit.
-
 Compliation
 -----------
 Compliation should happen from the root directory and in order to compile with the bibliography you must run pdflatex once then bibtex then pdflatex twice as follows:
     pdflatex report.tex
+
     bibtex report
+
     pdflatex report.tex
+
     pdflatex report.tex
 
 
- [bibdesk]: http://bibdesk.sourceforge.net/  "Bibdesk Site"
 
 Structure
 ---------
