@@ -45,6 +45,8 @@ The student experience from start to finish is a much more fluid process than be
     \caption{Student settings}
     \end{figure}
 
+    Although we tell students that deleting their account is peremenant, we took the design decision to actually keep old student data in the database unless purged out by the database manager. This is because we may wish to view activity before they deleted themselves or incase a student accidentally deletes themselves and notifies the admin that they've deleted themselves. It would be far nicer if they could be reinstanted, but we don't want to make them aware of this fact because they may loose their cautiousness. We found the rails3\_acts\_as\_paranoid\cite{paranoid_gem} gem took care of this nicely for us and did not require any extra work. It will by default remove `deleted' students from any database queries so that they do not show up on our site.
+
   \paragraph{Events and Placements:}
     When logged in and looking at his profile, Jack can see new events and placements that have recently been advertised. By attending events students often make better contacts with companies than applying online and so Jack may wish to view these events by clicking on any of these or the all button to view the entire list. He can then sign up to attend events and receive specific email notifications about them.
     %TODO: PIC HERE
