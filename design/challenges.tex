@@ -18,16 +18,32 @@
     Furthermore in the student account settings we allow them to choose between receiving this smart email system, all emails, or only personal and event emails.
 
   \subsubsection{Intuative Features}
-    Since it is not feasible to write a user manual for a website we faced many challenges ensuring that each user finds out site easy to navigate through and is made aware very quickly about the features that are available to them. Since we developed the site it is obvious to us how to use it but to ensure that users know too we have made use of the following:
+    Since it is not feasible to write a user manual for a website we faced many challenges ensuring that each user finds our site easy to navigate through and is made aware very quickly about the features that are available to them. Since we developed the site it is obvious to us how to use it but to ensure that users know too we have made use of the following:
 
-    \paragraph{Tooltips:} These appear whenever you run your cursor over an area of text that is actually editable. By this we mean you can click on it and edit it in place. Examples are the students name, year, degree, and bio. They all start with `click here to' and we believe they are well placed and helpful rather than irritating.
-    Tooltips also appear for company and admin. %TODO CHECK THIS
+    \paragraph{Tooltips:} These appear whenever you run your cursor over an area of text that can be edited in place, or over features that might not be completely obvious (such as company conact card drag and drop). Examples are the students name, year, degree, and bio. They all start with `click here to' and we believe they are well placed and helpful rather than irritating.      
+    \begin{figure}[H]\centering
+    \includegraphics[scale=0.5]{images/design/edit_degree_tooltip}
+    \caption{Useful degree tooltip}
+    \end{figure}
+    Tooltips also appear throughout for both company and department administrators.
     Once a user is comfortable with using the site, they have the option to turn tooltips off in their settings.
 
     \paragraph{Yellow Highlighting:} This also ties in nicely with the tooltips and highlights the boundary for what can and cannot be edited.
 
     \paragraph{Incomplete Sections:} In order to highlight to any user a section, document or field that is incomplete we have opted to highlight these in red rather than providing a message. We feel that by keeping this theme consistent throughout all users profiles it is quite intuative in itself.
     Whats more is that when a student initially signs up they are informed that their profile is inactive and they need to fill in certain fields before they can activate it. As they fill in these fields (which are initially red) the colour dissapears and we hope that students will intuatively learn from the beginning that the red colouring means an item is missing.
+
+    \paragraph{Typeahead} Unfortunately there are too many degree types throughout departments for us to validate. For example just within the Department of Computing we have BEng, MEng, PhD, MSc and within these we have specialist titles such as Artificial Intelligence, Software Engineeing, Computation in Biology and Medicine etc.\cite{doc-ug-degrees}. In order to achieve our objective of being available to multiple departments it is just not possible to validate these. Therefore in order to try to ensure students doing the same degree have the same title (i.e. `MEng Computing' rather than `MEng computing' or `meng computing' etc.) we have used Twitter Bootstraps typeahead feature which provides options for students to choose from on typing. They will hopefully feel encouragd to click on these options. The options are populated from the list of degrees that students throughout the department are currently using on their profiles and so is very dynamic.
+
+    \begin{figure}[H]\centering
+    \includegraphics[scale=0.5]{images/design/edit_suggestions}
+    \caption{Drop down degree suggestor}
+    \end{figure}
+
+    Likewise we make use of typeaheads throughout our site when allowing tag input. The aim of this is to make users aware of the tags available to them on input. This is again dynamically populated from the list of students tags, and if a tag is not in the list students have the option to add a new one by simply typing it in the tag input field. 
+
+    We decided that only students should be allowed to add new tags, companies can only tag their emails with tags that exist in the system to aid with the smart email filtering.
+    All tags are automatically downcased both on the server and the client.
 
     \paragraph{Navigation:} This has largely been made possible through the use of a navigation bar at the top of our website. We feel that this is intuative to all of our users who will be familiar with navigation bars from other sites such as Facebook\cite{facebook}, LinkedIn\cite{linkedin} and even Google\cite{google}. These websites really encourage user interaction by clicking on items located anywhere on the page and adopt the technique of changing the cursor to a pointer (hand) rather than the default which is normally displayed when you can interact with an object. As such we've adopted this technique through our site when items on the page can be clicked on to redirect. For example students can click on the top three events \& placements that are displayed on their dashboard. In order to make it very obvious we subtly change the colour scheme of the background to display that they've highlighted it.
     % TODO INSERT PICTURE HERE
