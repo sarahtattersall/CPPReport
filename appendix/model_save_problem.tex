@@ -8,7 +8,7 @@ However when saving the model we noticed that the error callback was always bein
 
 With some logging in the console we realised that the model was indeed valid before and after the call to save, but the error response message was that all of the fields were required (which on logging the model we could see they were there).
 
-This was very puzzling and so we had to investigate via the backbone code documentation\cite{backbone_code} and the changelog of the latest version release\cite{backbone_change_log} to find out that they had updated what happens if you pass \verb!wait: true! into the save options.
+This was very puzzling and so we had to investigate via the Backbone code documentation\cite{backbone_code} and the changelog of the latest version release\cite{backbone_change_log} to find out that they had updated what happens if you pass \verb!wait: true! into the save options.
 
 The documentation details `Pass \verb!{wait: true}! if you'd like to wait for the server before setting the new attributes on the model', which to us seemed like exactly what we wanted. 
 However on inspecting the documented code, what actually happens is the attributes will be reset to the server values via a call to clear the model, and then a call to set the options.

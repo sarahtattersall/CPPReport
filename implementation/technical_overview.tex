@@ -27,6 +27,9 @@
 		\paragraph{CoffeeScript\cite{coffeescript}} is used as an alternative to JavaScript due to its layer of beautiful syntactic sugar that allows us to produce Javascript in a really succinct and efficient way. This results in more efficient, neater code as well as longterm increased code production speed.
 		\paragraph{Twitter Bootstrap\cite{bootstrap}} is a front-end framework used to present a clean and simple user interface that supports dynamic scaling to different screen sizes. We chose Bootstrap for this reason and because it provides many useful JavaScript plugins such as the typeahead for our student degree and tag input fields. It provides nice visuals with very little setup which was perfect for our time frame of this project. We would not have had time to have designed the CSS ourselves.
 
-	%TODO PETE CAN YOU DO THIS
 	\subsubsection{Production}
-		CPP: Connect is now live and running on Heroku\cite{heroku}....[FINISH ME PLEASE SOMEONE]
+		CPP: Connect is now live and running on Heroku\cite{heroku}, a scalable, cloud based application platform which supports Ruby on Rails applications.
+
+		Heroku offers great scalability that ensures our site continues to run even with a large number of users, as we could simply scale up the number of heroku workers, and even set this to happen automatically e.g. at the start of an academic year (when a new student cohort arrives) or simply on demand.
+
+		Heroku provides us with a swift and reliable deployment procedure, allowing us to simply push our GIT repository to the Heroku servers. The push initiates several commands to update the live system with our changes including any necessary database migrations. This seamless integration meant deploying to our production server was effortlessly simple, especially given that Heroku is free!
