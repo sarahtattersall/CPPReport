@@ -13,7 +13,7 @@ This was very puzzling and so we had to investigate via the backbone code docume
 The documentation details `Pass \verb!{wait: true}! if you'd like to wait for the server before setting the new attributes on the model', which to us seemed like exactly what we wanted. 
 However on inspecting the documented code , what actually happens is the attributes will be reset to the server values via a call to clear the model, and then a call to set the options.
 It is on this \verb!clear! call that our error callback was being called, since we have validation in all of our models
-to document which fields are required. By clearing a field it will not pass validation and so this is where the mysterious message that the attribtues must be set was coming from.
+to document which fields are required. By clearing a field it will not pass validation and so this is where the mysterious message that the attributes must be set was coming from.
 
 \begin{figure}[H]\centering
 \includegraphics[scale=0.5]{images/appendix/backbone_changelog}
