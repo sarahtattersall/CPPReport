@@ -1,14 +1,15 @@
 \subsubsection{Student}
-The student experience from start to finish is a much more fluid process than before, take for an example a student Jack who wishes to sign up to help find himself a job for his third year compulsary industrial placement.
+The student experience from start to finish is a much more fluid process than before, take for an example a student Jack who wishes to sign up to help find himself a job for his compulsory third year industrial placement.
   \paragraph{Sign Up:}
-    The first thing Jack must do is sign up to CPP: Connect, under Imperial College's organisation. He can then choose the relevant departments he is a member of (in his case only Computing), enter a valid email address, password and password confirmation.
+    The first thing Jack must do is sign up to CPP: Connect. He can choose the relevant departments he is a member of (in his case only Computing), enter a valid email address, password, and password confirmation.
 
+    %TODO: Change seed to be Department of Mathematics
     \begin{figure}[H]\centering
     \includegraphics[scale=0.3]{images/user_experiences/student/sign_up_page}
     \caption{Student sign up view}
     \end{figure}
 
-    In order to sign up Jack must have a valid Imperial email address which will be identified if he uses his home address. We have used this as a technique to only allow students from a particular organisation to sign up.
+    In order to sign up Jack must have a valid Imperial email address, if he attempts to use a different email address it will be flagged. We have used this as a technique to only allow students from a particular organisation to sign up.
 
     \begin{figure}[H]\centering
     \includegraphics[scale=0.5]{images/user_experiences/student/invalid_email}
@@ -16,9 +17,9 @@ The student experience from start to finish is a much more fluid process than be
     \end{figure}
 
   \paragraph{Dashboard:}
-    Finally when all of Jack's details are correct he procedes to his dashboard. In order to not waste companies time with students that have not filled in the minimal detail requirements we deactivate a students profile on creation. A deactivated profile will not show up in company searches and needs at minimum a year, degree, status and CV to be revealed to companies. 
-    Jack is made aware of this via a drop down notifier on page load which tells him so and to make it even more obvious his student profile is greyed out with a message telling him it's deactivated.
+    Finally when all of Jack's details are correct he proceeds to his dashboard. In order to not waste companies' time with students that have not filled in the minimal detail requirements we do not show Jack's profile just yet. In order to show up he needs at minimum a year, degree, and CV which he is made aware of via an alert box at the top of his profile whenever he visits his dashboard.
 
+    %TODO REDO
     \begin{figure}[H]\centering
     \includegraphics[scale=0.3]{images/user_experiences/student/sign_up_deactivate}
     \caption{Deactivated student profile}
@@ -33,22 +34,22 @@ The student experience from start to finish is a much more fluid process than be
     \end{figure}
 
     %TODO: Enforce this bug is fixed
-    If at any time Jack removes information which is needed in order to make his profile complete it will automatically deactivate and he must complete the information again in order to show up in any company searches.
+    If at any time Jack removes information which is needed in order to make his profile complete it will automatically notify him that his profile has been hidden and he must complete the information again in order to show up in any search results.
 
   \paragraph{Settings:}
-    Jack also has an account settings page which can be accessed by clicking on his name which features the navigation bar. Jack can also preview his profile as it appears to companies and log out with this too. 
+    Jack also has an account settings page which can be accessed by clicking on his name in the navigation bar. Jack can also preview his profile as it appears to companies and log out with this too. 
 
-    Once in his settingds Jack can express if there are any skills or interests he does not wish to receive emails about when looking for a placement, toggle tool tips and company activation, delete his profile or change his password.
+    Once in his settings Jack can express if there are any skills or interests he does not wish to receive emails about when looking for a placement, toggle tool tips and whether his completed profile appears in search results, delete his profile or change his password.
 
     \begin{figure}[H]\centering
     \includegraphics[scale=0.3]{images/user_experiences/student/account_settings}
     \caption{Student settings}
     \end{figure}
 
-    Although we tell students that deleting their account is permenant, we took the design decision to actually keep old student data in the database unless purged out by the database manager. This is because we may wish to view activity before they deleted themselves or incase a student accidentally deletes themselves and notifies the admin that they've deleted themselves. It is far nicer to allow them to be reinstanted on the site. We found the rails3\_acts\_as\_paranoid\cite{paranoid_gem} gem took care of this nicely for us and did not require any extra work. It will by default remove `deleted' users from any database queries so that they do not show up on our site.
+    Although we tell students that deleting their account is permanent, we took the design decision to actually keep old student data in the database unless purged by the administrator. This is because we may wish to view activity before they deleted themselves or in case a student accidentally deletes themselves and notifies the administrator. It is far nicer to allow them to be reinstated on the site. We found the \textit{rails3\_acts\_as\_paranoid}\cite{paranoid_gem} gem took care of this nicely for us and did not require much additional work. It will by default remove `deleted' users from any database queries so that they do not show up on our site.
 
   \paragraph{Events and Placements:}
-    When logged in and looking at his profile, Jack can see new events and placements that have recently been advertised. By attending events students often make better personal contacts with companies than applying online and so Jack may wish to view these events by clicking on any of these or the all button to view the entire list. He can then sign up to attend events and will then receive specific email notifications about them.
+    When logged in and looking at his profile, Jack can see new events and placements that have been recently advertised. By attending events students often make better personal contacts with companies than applying online and so Jack may wish to view these events by clicking on any of these or the all button to view the entire list. He can then sign up to attend events and will then receive specific email notifications about them.
     %TODO: PIC HERE
     He can also browse advertised placements and send an email to any companies that advertise any he is really keen about.
 
@@ -56,18 +57,20 @@ The student experience from start to finish is a much more fluid process than be
 
   \paragraph{Companies:}
     Jack can also browse all companies, finding out a bit more about those he may not have heard of that he might be interested in working for. He does this by clicking on companies on the navigation bar and can work his way down the list, or choose to filter the list by name and/or description.
-    If Jack decides he does not wish to be contacted by specific companies he can choose to blacklist them at any time. For example if Jack is not interested in a career with Amazon and no longer wishes to receive any emails from them he can search for them on the companies list and then block them with the icon in the corner. He can also faviourte them to make sure he receives information by them, no matter if he has blacklisted a tag (perhaps he might change his mind on Python if it's at the right company?).
-    Companies can also be blocked/faviourted on their view page.
+    If Jack decides he does not wish to be contacted by specific companies he can choose to blacklist them at any time. For example if Jack is not interested in a career with Netcraft and no longer wishes to receive any emails from them he can search for them on the companies list and then block them with the icon in the corner. He can also favourite companies to make sure he receives information from them, even if it contains topics he has blacklisted a tag (perhaps he might change his mind on Python if it's at the right company?).
 
+    Companies can also be blocked/favourited on their view page.
+
+    %TODO: REDO PICS, REMEMBER TO USE SEARCH FEATURE
     \begin{figure}[H]\centering
     \includegraphics[scale=0.3]{images/user_experiences/student/block_amazon}
-    \caption{Students can block or faviourte companies}
+    \caption{Students can block or favourite companies}
     \end{figure}
 
   \paragraph{Whilst away:}
-    Once Jack has finished on the site he can log out and come back any time he wishes to use the it. Whilst away companies can view his profile and he'll receive emails from companies that wish to contact him.
+    Once Jack has finished on the site he can log out and come back any time he wishes to use it. Companies can view his profile and he'll receive emails from any that wish to contact him.
 
-  \paragraph{Later date:}
-    If Jack should wish to deactivate his profile in the future, he can easily do so via the deactivation option in his settings, and can re-active it in the exact same manner at a later date. Whilst deactivated Jack can still view and sign up to events as well as view placements and companies. He may either choose to deactivatie it in order to not appear in any company searches because his information is not up to date and will require some time to fix or he has a placement and does not wish to be contacted until he next needs to look for one.
+  \paragraph{In the future:}
+    If Jack should wish to deactivate his profile at a later date, he can easily do so via the deactivation option in his settings, and can re-active it in the exact same manner. Whilst deactivated Jack can still view and sign up to events as well as view placements and companies. He may choose to deactivate it in order to not appear in any company searches because his information is not up to date and will require some time to fix, or he might have obtained a placement and does not wish to advertise himself any longer.
 
-    Should Jack ever forget his password he can click on the `forgot password?' link provided in the navigation bar when he reaches the landing page. This will take him to a form where he registers his email address. Once submitted Jack's password is reset to a secure random eight character password which is automatically generated and is then emailed to him. He is also advised in the email to change his new password straight away, which can be done via the settings page as seen above.
+    Should Jack ever forget his password he can always click on the `forgot password?' link provided in the navigation bar when he reaches the landing page. This will take him to a form where he enters his email address. Once submitted, Jack's password is reset to a secure random eight character string which is automatically generated and then emailed to him. He is also advised in the email to change his new password straight away, which can be done via the settings page as described above.
