@@ -1,23 +1,23 @@
 \subsection{Challenges}
 As well as design challenges we faced many technical challenges along the way with the most significant being detailed below.
   \subsubsection{New technologies}
-    Our group faced varying levels of web development abilities when coming into this project; Pete and Tom were both experienced with releasing professional websites for companies, whereas Tom, Jack, and Sarah had only done a small amount of web development before. [CORRECT ME IF I'M WRONG]
-    With the exception of Peter, every single one of us was new to Ruby on Rails before this project. Everyone had used JavaScript to a varying degree, but only Peter and Sarah had used CoffeeScript before, and everyone was new to Backbone.js.
+    Our group had varying levels of web development abilities when coming into this project; Pete and Tom were both experienced with releasing professional websites for companies, whereas Tom, Jack, and Sarah had only done a small amount of web development before.
+    With the exception of Pete and Tom, every other member was new to Ruby on Rails before this project. Everyone had used JavaScript to a varying degree, but only Pete and Sarah had used CoffeeScript before, and everyone was new to Backbone.js.
 
     This meant that there was clearly a steep learning curve for our project and that if we were all to learn every single new aspect in detail we would spend more time learning than producing a professional product.
-    We therefore decided to deligate responsibilities into three groups:
+    We therefore decided to delegate responsibilities into three groups:
     \begin{itemize}
       \item \textbf{Front-end development -} Here Tom, Tom and Jack researched the client-side technologies we needed to know and focused on front end implementation and issues on GitHub.
-      \item \textbf{Back-end development -} Since Pete was already familiar with Ruby on Rails he felt relatively confident to tackle the backend development of our project. Once implemented he could then join in with the client side development with a fast-track introduction from the others. As Sarah is more interested in back end projects she helped Pete with this in order to pick up some knowledge for RSpec testing.
-      \item \textbf{Testing -} Sarah had done quite a lot of indetail testing in her summer internship with Amazon and so decided she would like to become proficient with RSpec and Jasminerice for the group. In order to do this she observed and worked on both server side and client side issues to help with the knowledge of the languages.
+      \item \textbf{Back-end development -} Since Pete and Tom were already familiar with Ruby on Rails they felt relatively confident to tackle the back-end development of our project. Once implemented they could then join in with the client side development with a fast-track introduction from the others. As Sarah was more interested in back end projects she helped Pete and Tom with this in order to pick up some knowledge for RSpec testing.
+      \item \textbf{Testing -} Sarah had done quite a lot of in-detail testing in her summer internship with Amazon and so decided she would like to become proficient with RSpec and Jasminerice for the group. In order to do this she observed and worked on both server side and client side issues to help with the knowledge of the languages.
     \end{itemize}
 
     We feel that this solution helped to tackle the large amount of work that needed to be done in a relatively short time frame.
   \subsubsection{Updating our Gems}
-    Leading on from the previous point that we had a lot of new technologies to learn, this meant that we did not always understand the complete ins and outs of the individual librarys when using them, just enough knowledge to procede with our project. This meant that in December when we decided to update all of our gems whereby some features unexpectidly broke we were left quite confused. As our test suite was not complete (documented later), these breakages managed to go unnoticed for quite a while.
+    Leading on from the previous point that we had a lot of new technologies to learn, this meant that we did not always understand the complete ins and outs of the individual libraries when using them, just enough knowledge to proceed with our project. This meant that in December when we decided to update all of our gems, some features unexpectedly broke which left us quite confused. As our test suite was not complete (documented later), these breakages managed to go unnoticed for quite a while.
 
     One such problem that was finally tracked down was saving Backbone models from the client to the server. On saving our server controller returned a 204 (No Content) success status code, clearly showing that the model had been saved on the server. However the error callback was always called instead of the success callback. This was first noticed when adding new tags to a students skill set, the tag would only be added on refresh (since it saved on the server), but it turned out this was happening in most other places where we saved models too.
-    We were absolutely sure that it must have been something we'd done to the code, that slipped past testing sicne consulting the Backbone.js documentation was no obvious help. Eventually we tracked the issue down to the Gem update commit that convinced us it must have actually been to do with updating them Gems.
-    This issue took a very long time to track down fix (the explanation is documented in section A of the appendix) and there were many others like this.
+    We were absolutely sure that it must have been something we'd done to the code, that slipped past testing since consulting the Backbone documentation was no obvious help. Eventually we tracked the issue down to the Gem update commit that convinced us it must have actually been to do with updating the Gems.
+    This issue took a very long time to track down and fix (the explanation is documented in section A of the appendix) and there were many others like this.
 
     Unfortunately poor documentation, a lack of knowledge and a less than complete test suite made Gem updating a rather difficult issue.
