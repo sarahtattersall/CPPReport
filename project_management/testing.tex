@@ -41,7 +41,7 @@
     We feel that mocking really helped us to to ensure that tests only failed when relevant code related to the class being tested was broken. Mock objects are used to test behaviour `much the same way that a car designer uses a crash test dummy to simulate the dynamic behavior of a human in vehicle impacts'\cite{mock_quote} and were of great importantance to us when testing a piece of code that depends on another.
     Since a specific test should only be testing a focus object, if an external object's behaviour was changed it and it broke a test it would have left us very confused to what functionality was actually broken. Mocking helped us avoid this problem, and some particular techniques for mocking we used were:
     
-    \paragraph{Spies} enabled us to watch objects method calls. We could set an object up with a spy, run some code and then ensure that the spy was called, with the arguments we expected and called the exepcted number of times.
+    \paragraph{Spies} enabled us to watch objects method calls. We could set an object up with a spy, run some code and then ensure that the spy was called, with the arguments we expected and called the expected number of times.
 
     \paragraph{Stubs} allowed us to decouple classes from one another during testing. We could stub out a classes new method in order to return our stubbed objects.
     These stubbed objects methods could be altered to return exactly what we wanted and they easily allowed us to test features of our code which would otherwise require a tricky set up.
